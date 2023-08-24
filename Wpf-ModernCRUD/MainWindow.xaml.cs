@@ -78,6 +78,8 @@ namespace Wpf_ModernCRUD
             var result = _db.CustomerDBs.Where(x => x.Name.Contains(TBoxSearch.Text) || x.Address.Contains(TBoxSearch.Text) || x.Phone.Contains(TBoxSearch.Text)).ToList();
             DGridCustomer.ItemsSource = result;
         }
+
+
     }
 }
 

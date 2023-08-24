@@ -19,7 +19,7 @@ WindowStartupLocation="CenterScreen"
             <Border.Background>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
                     <GradientStop Color="#313437" Offset="0.0"/>
-                    <GradientStop Color="#516473" Offset="1.5"/>
+                    <GradientStop Color="#FF3CAEDD" Offset="1.5"/>
                 </LinearGradientBrush>
             </Border.Background>
         </Border>
@@ -44,7 +44,7 @@ WindowStartupLocation="CenterScreen"
                         Click="BtnClose_Click"/>
             </StackPanel>
 
-            <StackPanel Grid.Row="1" Grid.Column="1" Margin="0 0 0 5">
+            <StackPanel Grid.Row="1" Grid.Column="1" Margin="0 0 0 5" >
                 <Grid>
                     <TextBox x:Name="TBoxSearch"
                              Style="{StaticResource TextBoxSearchStyle}"
@@ -55,12 +55,20 @@ WindowStartupLocation="CenterScreen"
                 <DataGrid x:Name="DGridCustomer"
                           x:FieldModifier="public"
                           FontFamily="Roboto"
-                          Margin="0 15 0 0">
-                    <DataGrid.Columns>
+                          Margin="0 15 0 0" 
+                         
+                          
+                          RowBackground="Black"
+                          Foreground="LightSeaGreen"
+                          >
+                    <DataGrid.Columns >
                         <DataGridTextColumn Header="Customer"
                                             IsReadOnly="True"
                                             Width="*"
-                                            Binding="{Binding Name}"/>
+                                            Binding="{Binding Name}"
+                                            
+                                            
+                                            />
 
                         <DataGridTextColumn Header="Address"
                                             IsReadOnly="True"
@@ -75,8 +83,8 @@ WindowStartupLocation="CenterScreen"
                         <DataGridTemplateColumn Header="Operations"
                                                 IsReadOnly="True"
                                                 Width="auto">
-                            <DataGridTemplateColumn.CellTemplate>
-                                <DataTemplate>
+                            <DataGridTemplateColumn.CellTemplate >
+                                <DataTemplate >
                                     <StackPanel Orientation="Horizontal">
                                         <Button x:Name="BtnEdit"
                                                 Cursor="Hand"
