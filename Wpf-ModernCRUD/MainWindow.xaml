@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Wpf_ModernCRUD"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800"
-        WindowStartupLocation="CenterScreen"
+WindowStartupLocation="CenterScreen"
         WindowStyle="None"
         AllowsTransparency="True"
         Background="Transparent"
@@ -55,11 +55,7 @@
                 <DataGrid x:Name="DGridCustomer"
                           x:FieldModifier="public"
                           FontFamily="Roboto"
-                          Margin="0 15 0 0"
-                          Style="{DynamicResource DataGridStyle1}"
-                          ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}"
-                          CellStyle="{DynamicResource DataGridCellStyle1}"
-                          RowStyle="{DynamicResource DataGridRowStyle1}">
+                          Margin="0 15 0 0">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Customer"
                                             IsReadOnly="True"
